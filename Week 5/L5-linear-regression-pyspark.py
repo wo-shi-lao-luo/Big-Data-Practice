@@ -5,14 +5,15 @@
 # # Create entry points to spark
 from pyspark.sql import SparkSession
 spark = SparkSession.builder\
-           .appName("Python Spark Linear Regression example")\
+           .appName("Python Spark Linear Regression example") \
            .config("spark.some.config.option", "some-value")\
+           .config("spark.driver.bindAddress", "127.0.0.1")\
            .getOrCreate()
 
 # In[2]:
 # Import data
 
-ad = spark.read.csv('Advertising.csv', header=True, inferSchema=True)
+ad = spark.read.csv('C:\Github\Big-Data-Practice\Week 5\Advertising.csv', header=True, inferSchema=True)
 ad.show(5)
 
 

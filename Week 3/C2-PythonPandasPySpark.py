@@ -4,7 +4,6 @@ Created on Tue Jan 28 18:30:01 2020
 
 @author: wchen
 """
-
 # In[0]:
 import numpy
 
